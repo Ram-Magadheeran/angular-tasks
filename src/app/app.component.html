@@ -1,0 +1,33 @@
+<hello name="{{ name }}"></hello>
+<p>Start editing to see some magic happen :)</p>
+<p>Form Valid: {{ createForm.valid }}</p>
+<p>Form invalid: {{ createForm.invalid }}</p>
+
+<form [formGroup]="createForm">
+  <div class="row">
+    <div class="col-md-12">
+      <label for="name" class="required">Name </label>
+      <input
+        type="text"
+        formControlName="tag_name"
+        class="form-control input-required"
+        id="tag_name"
+        name="tag_name"
+        required=""
+      />
+    </div>
+  </div>
+  <div class="row my-3">
+    <div class="col-md-12">
+      <label for="description" class="required">Object Type</label>
+      <input
+        class="form-control input-required"
+        placeholder="Select Object Type"
+        formControlName="object_type_id"
+        name="object_id"
+        required=""
+      />
+    </div>
+    <button (click)="changeForm()">Save</button>
+  </div>
+</form>
